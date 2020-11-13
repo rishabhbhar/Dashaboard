@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Dashaboard.Models.Dashboard>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.hashId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.interviewName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.skillLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assessmentModes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.questions)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.hashId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.interviewName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.skillLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assessmentModes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.questions)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

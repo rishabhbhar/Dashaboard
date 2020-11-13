@@ -1,0 +1,66 @@
+﻿@model Dashaboard.Models.Dashboard
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Dashboard</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.hashId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hashId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.interviewName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.interviewName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.skillLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.skillLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assessmentModes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assessmentModes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.questions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.questions)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
